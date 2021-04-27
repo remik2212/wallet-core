@@ -236,14 +236,14 @@ class BitcoinAddressTests: XCTestCase {
     }
 
     func testDeriveOneThread() {
-        let n = 200
+        let n = 75
         for _ in 1...n {
             testBitcoinDeriveAddress()
         }
     }
 
     func testMultiThreadedDerive() {
-        let nThread = 5
+        let nThread = 15
         let queue = OperationQueue()
         for _ in 1...nThread {
             queue.addOperation {

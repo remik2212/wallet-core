@@ -212,14 +212,14 @@ class BinanceChainTests: XCTestCase {
     }
 
     func testSignOrderOneThread() {
-        let n = 50
+        let n = 25
         for _ in 1...n {
             testSignSendOrder()
         }
     }
 
     func testMultiThreadedSign() {
-        let nThread = 5
+        let nThread = 15
         let queue = OperationQueue()
         for _ in 1...nThread {
             queue.addOperation {
